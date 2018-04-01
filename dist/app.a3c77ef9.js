@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({15:[function(require,module,exports) {
+})({16:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -138,19 +138,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":15}],7:[function(require,module,exports) {
+},{"./bundle-url":16}],7:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],17:[function(require,module,exports) {
+},{"_css_loader":11}],18:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],12:[function(require,module,exports) {
+},{"_css_loader":11}],13:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -220,9 +220,9 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":17}],16:[function(require,module,exports) {
-module.exports="dist/02.50082379.jpg";
-},{}],13:[function(require,module,exports) {
+},{"./print.component.scss":18}],17:[function(require,module,exports) {
+module.exports="02.50082379.jpg";
+},{}],14:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -287,17 +287,17 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":16}],18:[function(require,module,exports) {
-module.exports="dist/03.6e0fdd4b.jpg";
-},{}],19:[function(require,module,exports) {
-module.exports="dist/04.611ba2a1.jpg";
+},{"../../assets/02.jpg":17}],19:[function(require,module,exports) {
+module.exports="03.6e0fdd4b.jpg";
 },{}],20:[function(require,module,exports) {
-module.exports="dist/05.5f5d6fbb.jpg";
+module.exports="04.611ba2a1.jpg";
 },{}],21:[function(require,module,exports) {
-module.exports="dist/06.b02c8fe3.jpg";
+module.exports="05.5f5d6fbb.jpg";
 },{}],22:[function(require,module,exports) {
-module.exports="dist/07.b04a0feb.jpg";
-},{}],14:[function(require,module,exports) {
+module.exports="06.b02c8fe3.jpg";
+},{}],23:[function(require,module,exports) {
+module.exports="07.b04a0feb.jpg";
+},{}],15:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -427,7 +427,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":18,"../../assets/04.jpg":19,"../../assets/05.jpg":20,"../../assets/06.jpg":21,"../../assets/07.jpg":22}],6:[function(require,module,exports) {
+},{"../../assets/03.jpg":19,"../../assets/04.jpg":20,"../../assets/05.jpg":21,"../../assets/06.jpg":22,"../../assets/07.jpg":23}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -485,7 +485,7 @@ var MainController = function () {
 }();
 
 exports.default = MainController;
-},{"./components/print.component/print.component.js":12,"./components/setting.component/setting.component.js":13,"./components/list.component/list.component.js":14}],4:[function(require,module,exports) {
+},{"./components/print.component/print.component.js":13,"./components/setting.component/setting.component.js":14,"./components/list.component/list.component.js":15}],4:[function(require,module,exports) {
 'use strict';
 
 require('./style/main.scss');
@@ -498,7 +498,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var control = new _main2.default();
 window.control = control;
-},{"./style/main.scss":7,"./main.js":6}],23:[function(require,module,exports) {
+},{"./style/main.scss":7,"./main.js":6}],24:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -528,7 +528,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '65509' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50214' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -667,5 +667,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[23,4])
-//# sourceMappingURL=dist/app.a3c77ef9.map
+},{}]},{},[24,4])
+//# sourceMappingURL=app.a3c77ef9.map
