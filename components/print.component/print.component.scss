@@ -1,0 +1,147 @@
+@page {
+  size: A4;
+  margin: 0; 
+  /* margin: 2.54cm 3.17cm; */
+}
+
+@media print {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    counter-reset: PageNumber;
+    -webkit-print-color-adjust: exact;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td,
+  th {
+    border: 1px solid black;
+    text-align: left;
+  }
+  /* 列印不顯示 */
+  .no-print {
+    display: none;
+  }
+  .print-template {
+    display: block;
+    height: 100%;
+  }
+  /* 分頁 */
+  .print-page {
+    height: 100%;
+    padding: 96px 120px;
+    border: 1px solid white;
+    position: relative;
+    .page-number {
+      position: absolute;
+      width: 50px;
+      bottom: 50px;
+      left: 50%;
+      margin-left: -25px;
+      text-align: center;
+      &::before {
+        counter-increment: PageNumber;
+        content: 'P.' counter(PageNumber);
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .page-title {
+      text-align: center;
+    }
+  }
+  /* 封面 */
+  .print-cover-page {
+    position: relative;
+    .cover-headline-block {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      .title {
+        text-align: center;
+        letter-spacing: 5px;
+      }
+      .sub-title {
+        text-align: center;
+      }
+    }
+    .cover-photo-block {
+      height: 8cm;
+      .photo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .cover-info-block {
+      .author {
+        font-size: 18px;
+      }
+      .date {
+        font-size: 18px;
+      }
+      .underline {
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  /* 頁尾 */
+  .print-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 96px;
+    padding: 0px 120px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .footer-left {
+    justify-content: flex-start;
+  }
+  .footer-center {
+    justify-content: center;
+  }
+  .footer-right {
+    justify-content: flex-end;
+  }
+  /* 表格 */
+  .print-table {
+    width: 100%;
+    margin-top: 20px;
+    td {
+      width: 50%;
+      padding: 5px;
+      .td-img {
+        width: 100%;
+        height: 8cm;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: 100%;
+          min-height: calc(100% - px);
+          max-height: calc(100% - 10px);
+        }
+      }
+    }
+    td {
+      width: 50%;
+      .td-description {
+        width: 100%;
+        height: .75cm;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

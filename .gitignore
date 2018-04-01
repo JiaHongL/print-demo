@@ -1,0 +1,5 @@
+#############
+## Project
+#############
+node_modules/*
+.cache/*
