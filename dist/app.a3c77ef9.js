@@ -144,7 +144,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],22:[function(require,module,exports) {
+},{"_css_loader":11}],17:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -220,8 +220,8 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":22}],16:[function(require,module,exports) {
-module.exports="/02.50082379.jpg";
+},{"./print.component.scss":17}],16:[function(require,module,exports) {
+module.exports="dist/02.50082379.jpg";
 },{}],13:[function(require,module,exports) {
 'use strict';
 
@@ -287,16 +287,16 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":16}],17:[function(require,module,exports) {
-module.exports="/03.6e0fdd4b.jpg";
-},{}],18:[function(require,module,exports) {
-module.exports="/04.611ba2a1.jpg";
+},{"../../assets/02.jpg":16}],18:[function(require,module,exports) {
+module.exports="dist/03.6e0fdd4b.jpg";
 },{}],19:[function(require,module,exports) {
-module.exports="/05.5f5d6fbb.jpg";
+module.exports="dist/04.611ba2a1.jpg";
 },{}],20:[function(require,module,exports) {
-module.exports="/06.b02c8fe3.jpg";
+module.exports="dist/05.5f5d6fbb.jpg";
 },{}],21:[function(require,module,exports) {
-module.exports="/07.b04a0feb.jpg";
+module.exports="dist/06.b02c8fe3.jpg";
+},{}],22:[function(require,module,exports) {
+module.exports="dist/07.b04a0feb.jpg";
 },{}],14:[function(require,module,exports) {
 'use strict';
 
@@ -427,7 +427,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":17,"../../assets/04.jpg":18,"../../assets/05.jpg":19,"../../assets/06.jpg":20,"../../assets/07.jpg":21}],6:[function(require,module,exports) {
+},{"../../assets/03.jpg":18,"../../assets/04.jpg":19,"../../assets/05.jpg":20,"../../assets/06.jpg":21,"../../assets/07.jpg":22}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -528,7 +528,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64701' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '65509' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -668,4 +668,4 @@ function hmrAccept(bundle, id) {
   });
 }
 },{}]},{},[23,4])
-//# sourceMappingURL=/app.a3c77ef9.map
+//# sourceMappingURL=dist/app.a3c77ef9.map
