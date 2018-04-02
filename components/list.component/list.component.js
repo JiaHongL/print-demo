@@ -148,9 +148,9 @@ export default class List {
         temp.innerHTML = listHtml;
         let htmlObject = temp.firstChild;
         ListComponentElement.appendChild(htmlObject);
-
+        
         for (let index = 0; index < ListComponentElement.getElementsByClassName('ListItems').length; index++) {
-            ListComponentElement.getElementsByClassName('ListItems')[index].addEventListener("change", (event) => {
+            ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.AddImg')[0].addEventListener("change", (event) => {
                 event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
                 event.target.parentNode.children[1].style = 'display:none;';
             }, false);
@@ -158,13 +158,6 @@ export default class List {
                 this._removeItem(e);
             };
         }
-        ListComponentElement.querySelectorAll('.AddImg')[0].addEventListener("change", (event) => {
-            event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
-            event.target.parentNode.children[1].style = 'display:none;';
-        }, false);
-        ListComponentElement.querySelectorAll('.RemovePanel')[0].onclick = (e) => {
-            this._removeItem(e);
-        };
         ListComponentElement.querySelectorAll('#AddPanel')[0].onclick = () => {
             this._create();
         };

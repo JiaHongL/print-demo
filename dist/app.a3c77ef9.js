@@ -107,7 +107,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],11:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -138,19 +138,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":16}],7:[function(require,module,exports) {
+},{"./bundle-url":16}],4:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],18:[function(require,module,exports) {
+},{"_css_loader":5}],15:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":11}],13:[function(require,module,exports) {
+},{"_css_loader":5}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -220,9 +220,9 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":18}],17:[function(require,module,exports) {
+},{"./print.component.scss":15}],9:[function(require,module,exports) {
 module.exports="02.50082379.jpg";
-},{}],14:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -287,17 +287,17 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":17}],19:[function(require,module,exports) {
+},{"../../assets/02.jpg":9}],10:[function(require,module,exports) {
 module.exports="03.6e0fdd4b.jpg";
-},{}],20:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 module.exports="04.611ba2a1.jpg";
-},{}],21:[function(require,module,exports) {
+},{}],12:[function(require,module,exports) {
 module.exports="05.5f5d6fbb.jpg";
-},{}],22:[function(require,module,exports) {
+},{}],13:[function(require,module,exports) {
 module.exports="06.b02c8fe3.jpg";
-},{}],23:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 module.exports="07.b04a0feb.jpg";
-},{}],15:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -389,7 +389,7 @@ var List = function () {
             ListComponentElement.appendChild(htmlObject);
 
             for (var index = 0; index < ListComponentElement.getElementsByClassName('ListItems').length; index++) {
-                ListComponentElement.getElementsByClassName('ListItems')[index].addEventListener("change", function (event) {
+                ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.AddImg')[0].addEventListener("change", function (event) {
                     event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
                     event.target.parentNode.children[1].style = 'display:none;';
                 }, false);
@@ -397,13 +397,6 @@ var List = function () {
                     _this2._removeItem(e);
                 };
             }
-            ListComponentElement.querySelectorAll('.AddImg')[0].addEventListener("change", function (event) {
-                event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
-                event.target.parentNode.children[1].style = 'display:none;';
-            }, false);
-            ListComponentElement.querySelectorAll('.RemovePanel')[0].onclick = function (e) {
-                _this2._removeItem(e);
-            };
             ListComponentElement.querySelectorAll('#AddPanel')[0].onclick = function () {
                 _this2._create();
             };
@@ -427,7 +420,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":19,"../../assets/04.jpg":20,"../../assets/05.jpg":21,"../../assets/06.jpg":22,"../../assets/07.jpg":23}],6:[function(require,module,exports) {
+},{"../../assets/03.jpg":10,"../../assets/04.jpg":11,"../../assets/05.jpg":12,"../../assets/06.jpg":13,"../../assets/07.jpg":14}],3:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -485,7 +478,7 @@ var MainController = function () {
 }();
 
 exports.default = MainController;
-},{"./components/print.component/print.component.js":13,"./components/setting.component/setting.component.js":14,"./components/list.component/list.component.js":15}],4:[function(require,module,exports) {
+},{"./components/print.component/print.component.js":6,"./components/setting.component/setting.component.js":7,"./components/list.component/list.component.js":8}],2:[function(require,module,exports) {
 'use strict';
 
 require('./style/main.scss');
@@ -498,7 +491,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var control = new _main2.default();
 window.control = control;
-},{"./style/main.scss":7,"./main.js":6}],24:[function(require,module,exports) {
+},{"./style/main.scss":4,"./main.js":3}],17:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -528,7 +521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50214' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53178' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -667,5 +660,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[24,4])
+},{}]},{},[17,2])
 //# sourceMappingURL=app.a3c77ef9.map
