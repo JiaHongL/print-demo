@@ -338,11 +338,6 @@ var List = function () {
     }
 
     _createClass(List, [{
-        key: 'count',
-        value: function count(params) {
-            return params;
-        }
-    }, {
         key: '_createItem',
         value: function _createItem() {
             var _this = this;
@@ -521,7 +516,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53178' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53638' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

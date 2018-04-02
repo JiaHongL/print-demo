@@ -9,10 +9,6 @@ export default class List {
         this.ListComponentName = '';
     }
 
-    count(params) {
-        return params;
-    }
-
     _createItem() {
         var panelHtml =
             `<div class="w3-col s12 m6 l3">
@@ -148,7 +144,7 @@ export default class List {
         temp.innerHTML = listHtml;
         let htmlObject = temp.firstChild;
         ListComponentElement.appendChild(htmlObject);
-        
+
         for (let index = 0; index < ListComponentElement.getElementsByClassName('ListItems').length; index++) {
             ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.AddImg')[0].addEventListener("change", (event) => {
                 event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
