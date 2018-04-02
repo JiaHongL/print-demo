@@ -92,7 +92,8 @@
   /* 表格 */
   .print-table {
     width: 100%;
-    margin-top: .5cm; }
+    margin-top: .5cm;
+    page-break-inside: avoid; }
     .print-table td {
       width: 50%;
       padding: 5px; }

@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({21:[function(require,module,exports) {
+})({17:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -107,7 +107,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],8:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -138,19 +138,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":21}],7:[function(require,module,exports) {
+},{"./bundle-url":17}],4:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":8}],17:[function(require,module,exports) {
+},{"_css_loader":5}],15:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":8}],10:[function(require,module,exports) {
+},{"_css_loader":5}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -220,9 +220,9 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":17}],20:[function(require,module,exports) {
+},{"./print.component.scss":15}],14:[function(require,module,exports) {
 module.exports="/02.50082379.jpg";
-},{}],11:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -287,17 +287,17 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":20}],22:[function(require,module,exports) {
+},{"../../assets/02.jpg":14}],9:[function(require,module,exports) {
 module.exports="/03.6e0fdd4b.jpg";
-},{}],23:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 module.exports="/04.611ba2a1.jpg";
-},{}],24:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 module.exports="/05.5f5d6fbb.jpg";
-},{}],25:[function(require,module,exports) {
-module.exports="/06.b02c8fe3.jpg";
-},{}],26:[function(require,module,exports) {
-module.exports="/07.b04a0feb.jpg";
 },{}],12:[function(require,module,exports) {
+module.exports="/06.b02c8fe3.jpg";
+},{}],13:[function(require,module,exports) {
+module.exports="/07.b04a0feb.jpg";
+},{}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -416,7 +416,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":22,"../../assets/04.jpg":23,"../../assets/05.jpg":24,"../../assets/06.jpg":25,"../../assets/07.jpg":26}],6:[function(require,module,exports) {
+},{"../../assets/03.jpg":9,"../../assets/04.jpg":10,"../../assets/05.jpg":11,"../../assets/06.jpg":12,"../../assets/07.jpg":13}],3:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -474,7 +474,7 @@ var MainController = function () {
 }();
 
 exports.default = MainController;
-},{"./components/print.component/print.component.js":10,"./components/setting.component/setting.component.js":11,"./components/list.component/list.component.js":12}],4:[function(require,module,exports) {
+},{"./components/print.component/print.component.js":6,"./components/setting.component/setting.component.js":7,"./components/list.component/list.component.js":8}],2:[function(require,module,exports) {
 'use strict';
 
 require('./style/main.scss');
@@ -487,7 +487,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var control = new _main2.default();
 window.control = control;
-},{"./style/main.scss":7,"./main.js":6}],27:[function(require,module,exports) {
+},{"./style/main.scss":4,"./main.js":3}],44:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -517,7 +517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49394' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50323' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -656,5 +656,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[27,4])
+},{}]},{},[44,2])
 //# sourceMappingURL=/app.a3c77ef9.map
