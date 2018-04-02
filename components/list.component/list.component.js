@@ -144,30 +144,32 @@ export default class List {
         temp.innerHTML = listHtml;
         let htmlObject = temp.firstChild;
         ListComponentElement.appendChild(htmlObject);
-
-        for (let index = 0; index < ListComponentElement.getElementsByClassName('ListItems').length; index++) {
-            ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.AddImg')[0].addEventListener("change", (event) => {
+        
+        Array.from(ListComponentElement.getElementsByClassName('ListItems')).forEach((item) => {
+            item.querySelectorAll('.AddImg')[0].addEventListener("change", (event) => {
                 event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
                 event.target.parentNode.children[1].style = 'display:none;';
             }, false);
-            ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.RemovePanel')[0].onclick = (e) => {
+            item.querySelectorAll('.RemovePanel')[0].onclick = (e) => {
                 this._removeItem(e);
             };
-        }
+        });
+
+
         ListComponentElement.querySelectorAll('#AddPanel')[0].onclick = () => {
             this._create();
         };
     }
 
     getComponentData() {
-        let ListImg = document.getElementsByClassName('ListItems');
         let Data = [];
-        for (let index = 0; index < ListImg.length; index++) {
+        Array.from(document.getElementsByClassName('ListItems')).forEach((item) => {
             Data.push({
-                'Src': ListImg[index].querySelectorAll('.Photo')[0].src,
-                'Desc': ListImg[index].querySelectorAll('.Desc')[0].value
+                Src: item.querySelectorAll('.Photo')[0].src,
+                Desc: item.querySelectorAll('.Desc')[0].value
             });
-        };
+        });
+
         return Data;
     }
 

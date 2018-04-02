@@ -1,6 +1,6 @@
 @page {
-  size: A4;
-  margin: 0; 
+  size: A4 portrait;
+  margin: 0;
   /* margin: 2.54cm 3.17cm; */
 }
 
@@ -20,7 +20,6 @@
   td,
   th {
     border: 1px solid black;
-    text-align: left;
   }
   /* 列印不顯示 */
   .no-print {
@@ -34,20 +33,20 @@
   .print-page {
     page-break-after: always;
     height: 100%;
-    padding: 96px 120px;
+    padding: 2.54cm 3.17cm;
     border: 1px solid white;
     position: relative;
     .page-number {
       position: absolute;
       width: 50px;
-      bottom: 50px;
+      bottom: 1.32cm;
       left: 50%;
       margin-left: -25px;
       text-align: center;
       &::before {
         counter-increment: PageNumber;
         content: 'P.' counter(PageNumber);
-        font-size: 12px;
+        font-size: 9pt;
         padding: 0;
         margin: 0;
       }
@@ -60,11 +59,11 @@
   .print-cover-page {
     position: relative;
     .cover-headline-block {
-      margin-top: 100px;
-      margin-bottom: 100px;
+      margin-top: 2.64cm;
+      margin-bottom: 2.64cm;
       .title {
         text-align: center;
-        letter-spacing: 5px;
+        letter-spacing: 3.75pt;
       }
       .sub-title {
         text-align: center;
@@ -79,17 +78,17 @@
     }
     .cover-info-block {
       .author {
-        font-size: 18px;
+        font-size: 13.5pt;
       }
       .date {
-        font-size: 18px;
+        font-size: 13.5pt;
       }
       .underline {
         display: inline-block;
-        width: 200px;
+        width: 5.29cm;
         text-align: center;
-        border-bottom: 1px solid #000;
-        letter-spacing: 2px;
+        border-bottom: .75pt solid #000;
+        letter-spacing: 1.5pt;
       }
     }
   }
@@ -97,8 +96,8 @@
   .print-footer {
     position: fixed;
     width: 100%;
-    bottom: 96px;
-    padding: 0px 120px;
+    bottom: 2.54cm;
+    padding: 0cm 3.17cm;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -115,7 +114,7 @@
   /* 表格 */
   .print-table {
     width: 100%;
-    margin-top: 20px;
+    margin-top: .5cm;
     td {
       width: 50%;
       padding: 5px;
@@ -128,7 +127,7 @@
         align-items: center;
         img {
           max-width: 100%;
-          min-height: calc(100% - px);
+          min-height: calc(100% - 10px);
           max-height: calc(100% - 10px);
         }
       }

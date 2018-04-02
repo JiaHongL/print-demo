@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({16:[function(require,module,exports) {
+})({21:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -107,7 +107,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],5:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -138,19 +138,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":16}],4:[function(require,module,exports) {
+},{"./bundle-url":21}],7:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],15:[function(require,module,exports) {
+},{"_css_loader":8}],17:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],6:[function(require,module,exports) {
+},{"_css_loader":8}],10:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -197,19 +197,19 @@ var Print = function () {
 				var Count = 4 - Tables[Tables.length - 1].length;
 				for (var index = 0; index < Count; index++) {
 					Tables[Tables.length - 1].push({
-						'Src': '',
-						'Desc': ''
+						Src: '',
+						Desc: ''
 					});
 				};
 			};
 
-			for (var _index = 0; _index < Tables.length; _index++) {
-				var tableHtml = '<div class="print-page">\n\t\t\t\t\t<h3 class="page-title">\u76F8\u95DC\u7167\u7247</h3>\n\t\t\t\t\t<table class="print-table">\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + Tables[_index][0].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + Tables[_index][1].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + Tables[_index][0].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + Tables[_index][1].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + Tables[_index][2].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + Tables[_index][3].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + Tables[_index][2].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + Tables[_index][3].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t\t<div class="page-number"></div>\n\t\t\t\t</div>';
+			Tables.forEach(function (item, index) {
+				var tableHtml = '<div class="print-page">\n\t\t\t\t\t<h3 class="page-title">\u76F8\u95DC\u7167\u7247</h3>\n\t\t\t\t\t<table class="print-table">\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + item[0].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + item[1].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + item[0].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + item[1].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + item[2].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-img">\n\t\t\t\t\t\t\t\t\t<img src="' + item[3].Src + '" alt="">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + item[2].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<div class="td-description">\n\t\t\t\t\t\t\t\t\t<span>' + item[3].Desc + '</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t\t<div class="page-number"></div>\n\t\t\t\t</div>';
 				var tableTemp = document.createElement('div');
 				tableTemp.innerHTML = tableHtml;
 				var tableHtmlObject = tableTemp.firstChild;
 				PrintComponentElement.appendChild(tableHtmlObject);
-			};
+			});
 
 			// print
 			window.print();
@@ -220,9 +220,9 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":15}],9:[function(require,module,exports) {
-module.exports="02.50082379.jpg";
-},{}],7:[function(require,module,exports) {
+},{"./print.component.scss":17}],20:[function(require,module,exports) {
+module.exports="/02.50082379.jpg";
+},{}],11:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -253,7 +253,7 @@ var Setting = function () {
 
             var SettingComponentElement = document.getElementById(id);
             SettingComponentElement.className = 'w3-container no-print';
-            var settingHtml = '<form name="SettingForm" class="w3-container w3-margin w3-teal w3-round w3-padding-16">\n            <div class="w3-row-padding">\n                <div class="w3-col s12 m5 l5" style="position:relative;">\n                    <img name="ImgSrc" src="' + _2.default + '" class="w3-border" alt="Norway" style="width:100%;height:290px;">\n                    <input class="AddImg w3-btn w3-black" type="file" name="image" id="image" accept="image/*"  style="position:absolute;top:0;left:0;width:100%;height:290px;opacity:0;" >\n                </div>\n                <div class="w3-col s12 m7 l7">\n                    <div class="w3-row-padding w3-margin-bottom">\n                        <div class="w3-half">\n                            <label>\u6A19\u984C</label>\n                            <input name="Title" class="w3-input w3-border w3-round" type="text" value="\u5FEB\u6A02\u4F86\u81F3\u65BC\u6EFF\u8DB3\u611F" placeholder="">\n                        </div>\n                        <div class="w3-half">\n                            <label>\u526F\u6A19\u984C</label>\n                            <input name="SubTitle" class="w3-input w3-border w3-round" type="text" value="\u5477\u98FD\u7959?" placeholder="">\n                        </div>\n                    </div>\n                    <div class="w3-row-padding w3-margin-bottom">\n                        <div class="w3-half">\n                            <label>\u65E5\u671F</label>\n                            <input name="Date" class="w3-input w3-border w3-round" type="text" value="2018/04/01" placeholder="">\n                        </div>\n                        <div class="w3-half">\n                            <label>\u4F5C\u8005</label>\n                            <input name="Author" class="w3-input w3-border w3-round" type="text" value="\u6797\u5C0F\u80A5" placeholder="">\n                        </div>\n                    </div>\n                    <div class="w3-row-padding w3-margin-bottom">\n                        <div class="w3-half">\n                            <label>\u9801\u5C3E</label>\n                            <input name="FooterStr" class="w3-input w3-border w3-round" type="text" value="\u6211\u662F\u9801\u5C3E\u5566~~~" placeholder="">\n                        </div>\n                        <div class="w3-half">\n                            <label>\u9801\u5C3E\u4F4D\u7F6E</label>\n                            <p style="margin:0;">\n                                <input id="RadioL" class="w3-radio" type="radio" name="Position" value="left" >\n                                <label for="RadioL">\u9760\u5DE6</label>\n                                <input id="RadioC"class="w3-radio" type="radio" name="Position" value="center" >\n                                <label for="RadioC" for="male">\u7F6E\u4E2D</label>\n                                <input id="RadioR" class="w3-radio" type="radio" name="Position" value="right" checked>\n                                <label for="RadioR">\u9760\u53F3</label>\n                            </p>\n                        </div>\n                    </div>\n                    <div class="w3-row-padding w3-margin-bottom">\n                        <div class="w3-col">\n                            <button id="Print" type="button" class="w3-button w3-block w3-khaki" style="color:white">\n                                    \u5217\u5370\n                            </button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </form>';
+            var settingHtml = '<form name="SettingForm" class="w3-container w3-margin w3-teal w3-round w3-padding-16">\n                <div class="w3-row-padding">\n                    <div class="w3-col s12 m5 l5" style="position:relative;">\n                        <img name="ImgSrc" src="' + _2.default + '" class="w3-border" alt="Norway" style="width:100%;height:290px;">\n                        <input class="AddImg w3-btn w3-black" type="file" name="image" id="image" accept="image/*"  style="position:absolute;top:0;left:0;width:100%;height:290px;opacity:0;" >\n                    </div>\n                    <div class="w3-col s12 m7 l7">\n                        <div class="w3-row-padding w3-margin-bottom">\n                            <div class="w3-half">\n                                <label>\u6A19\u984C</label>\n                                <input name="Title" class="w3-input w3-border w3-round" type="text" value="\u5FEB\u6A02\u4F86\u81F3\u65BC\u6EFF\u8DB3\u611F" placeholder="">\n                            </div>\n                            <div class="w3-half">\n                                <label>\u526F\u6A19\u984C</label>\n                                <input name="SubTitle" class="w3-input w3-border w3-round" type="text" value="\u5477\u98FD\u7959?" placeholder="">\n                            </div>\n                        </div>\n                        <div class="w3-row-padding w3-margin-bottom">\n                            <div class="w3-half">\n                                <label>\u65E5\u671F</label>\n                                <input name="Date" class="w3-input w3-border w3-round" type="text" value="2018/04/01" placeholder="">\n                            </div>\n                            <div class="w3-half">\n                                <label>\u4F5C\u8005</label>\n                                <input name="Author" class="w3-input w3-border w3-round" type="text" value="\u6797\u5C0F\u80A5" placeholder="">\n                            </div>\n                        </div>\n                        <div class="w3-row-padding w3-margin-bottom">\n                            <div class="w3-half">\n                                <label>\u9801\u5C3E</label>\n                                <input name="FooterStr" class="w3-input w3-border w3-round" type="text" value="\u6211\u662F\u9801\u5C3E\u5566~~~" placeholder="">\n                            </div>\n                            <div class="w3-half">\n                                <label>\u9801\u5C3E\u4F4D\u7F6E</label>\n                                <p style="margin:0;">\n                                    <input id="RadioL" class="w3-radio" type="radio" name="Position" value="left" >\n                                    <label for="RadioL">\u9760\u5DE6</label>\n                                    <input id="RadioC"class="w3-radio" type="radio" name="Position" value="center" >\n                                    <label for="RadioC" for="male">\u7F6E\u4E2D</label>\n                                    <input id="RadioR" class="w3-radio" type="radio" name="Position" value="right" checked>\n                                    <label for="RadioR">\u9760\u53F3</label>\n                                </p>\n                            </div>\n                        </div>\n                        <div class="w3-row-padding w3-margin-bottom">\n                            <div class="w3-col">\n                                <button id="Print" type="button" class="w3-button w3-block w3-khaki" style="color:white">\n                                        \u5217\u5370\n                                </button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </form>';
 
             var temp = document.createElement('div');
             temp.innerHTML = settingHtml;
@@ -287,17 +287,17 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":9}],10:[function(require,module,exports) {
-module.exports="03.6e0fdd4b.jpg";
-},{}],11:[function(require,module,exports) {
-module.exports="04.611ba2a1.jpg";
+},{"../../assets/02.jpg":20}],22:[function(require,module,exports) {
+module.exports="/03.6e0fdd4b.jpg";
+},{}],23:[function(require,module,exports) {
+module.exports="/04.611ba2a1.jpg";
+},{}],24:[function(require,module,exports) {
+module.exports="/05.5f5d6fbb.jpg";
+},{}],25:[function(require,module,exports) {
+module.exports="/06.b02c8fe3.jpg";
+},{}],26:[function(require,module,exports) {
+module.exports="/07.b04a0feb.jpg";
 },{}],12:[function(require,module,exports) {
-module.exports="05.5f5d6fbb.jpg";
-},{}],13:[function(require,module,exports) {
-module.exports="06.b02c8fe3.jpg";
-},{}],14:[function(require,module,exports) {
-module.exports="07.b04a0feb.jpg";
-},{}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -383,15 +383,16 @@ var List = function () {
             var htmlObject = temp.firstChild;
             ListComponentElement.appendChild(htmlObject);
 
-            for (var index = 0; index < ListComponentElement.getElementsByClassName('ListItems').length; index++) {
-                ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.AddImg')[0].addEventListener("change", function (event) {
+            Array.from(ListComponentElement.getElementsByClassName('ListItems')).forEach(function (item) {
+                item.querySelectorAll('.AddImg')[0].addEventListener("change", function (event) {
                     event.target.parentNode.children[0].src = URL.createObjectURL(event.target.files[0]);
                     event.target.parentNode.children[1].style = 'display:none;';
                 }, false);
-                ListComponentElement.getElementsByClassName('ListItems')[index].querySelectorAll('.RemovePanel')[0].onclick = function (e) {
+                item.querySelectorAll('.RemovePanel')[0].onclick = function (e) {
                     _this2._removeItem(e);
                 };
-            }
+            });
+
             ListComponentElement.querySelectorAll('#AddPanel')[0].onclick = function () {
                 _this2._create();
             };
@@ -399,14 +400,14 @@ var List = function () {
     }, {
         key: 'getComponentData',
         value: function getComponentData() {
-            var ListImg = document.getElementsByClassName('ListItems');
             var Data = [];
-            for (var index = 0; index < ListImg.length; index++) {
+            Array.from(document.getElementsByClassName('ListItems')).forEach(function (item) {
                 Data.push({
-                    'Src': ListImg[index].querySelectorAll('.Photo')[0].src,
-                    'Desc': ListImg[index].querySelectorAll('.Desc')[0].value
+                    Src: item.querySelectorAll('.Photo')[0].src,
+                    Desc: item.querySelectorAll('.Desc')[0].value
                 });
-            };
+            });
+
             return Data;
         }
     }]);
@@ -415,7 +416,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":10,"../../assets/04.jpg":11,"../../assets/05.jpg":12,"../../assets/06.jpg":13,"../../assets/07.jpg":14}],3:[function(require,module,exports) {
+},{"../../assets/03.jpg":22,"../../assets/04.jpg":23,"../../assets/05.jpg":24,"../../assets/06.jpg":25,"../../assets/07.jpg":26}],6:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -473,7 +474,7 @@ var MainController = function () {
 }();
 
 exports.default = MainController;
-},{"./components/print.component/print.component.js":6,"./components/setting.component/setting.component.js":7,"./components/list.component/list.component.js":8}],2:[function(require,module,exports) {
+},{"./components/print.component/print.component.js":10,"./components/setting.component/setting.component.js":11,"./components/list.component/list.component.js":12}],4:[function(require,module,exports) {
 'use strict';
 
 require('./style/main.scss');
@@ -486,7 +487,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var control = new _main2.default();
 window.control = control;
-},{"./style/main.scss":4,"./main.js":3}],17:[function(require,module,exports) {
+},{"./style/main.scss":7,"./main.js":6}],27:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -516,7 +517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55995' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49394' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -655,5 +656,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[17,2])
-//# sourceMappingURL=app.a3c77ef9.map
+},{}]},{},[27,4])
+//# sourceMappingURL=/app.a3c77ef9.map

@@ -51,13 +51,13 @@ export default class Print {
 			var Count = 4 - Tables[Tables.length - 1].length
 			for (let index = 0; index < Count; index++) {
 				Tables[Tables.length - 1].push({
-					'Src': '',
-					'Desc': '',
+					Src: '',
+					Desc: '',
 				});
 			};
 		};
 
-		for (let index = 0; index < Tables.length; index++) {
+		Tables.forEach((item, index) => {
 			let tableHtml =
 				`<div class="print-page">
 					<h3 class="page-title">相關照片</h3>
@@ -65,48 +65,48 @@ export default class Print {
 						<tr>
 							<td>
 								<div class="td-img">
-									<img src="` + Tables[index][0].Src + `" alt="">
+									<img src="` + item[0].Src + `" alt="">
 								</div>
 							</td>
 							<td>
 								<div class="td-img">
-									<img src="` + Tables[index][1].Src + `" alt="">
+									<img src="` + item[1].Src + `" alt="">
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<div class="td-description">
-									<span>` + Tables[index][0].Desc + `</span>
+									<span>` + item[0].Desc + `</span>
 								</div>
 							</td>
 							<td>
 								<div class="td-description">
-									<span>` + Tables[index][1].Desc + `</span>
+									<span>` + item[1].Desc + `</span>
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<div class="td-img">
-									<img src="` + Tables[index][2].Src + `" alt="">
+									<img src="` + item[2].Src + `" alt="">
 								</div>
 							</td>
 							<td>
 								<div class="td-img">
-									<img src="` + Tables[index][3].Src + `" alt="">
+									<img src="` + item[3].Src + `" alt="">
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<div class="td-description">
-									<span>` + Tables[index][2].Desc + `</span>
+									<span>` + item[2].Desc + `</span>
 								</div>
 							</td>
 							<td>
 								<div class="td-description">
-									<span>` + Tables[index][3].Desc + `</span>
+									<span>` + item[3].Desc + `</span>
 								</div>
 							</td>
 						</tr>
@@ -117,7 +117,7 @@ export default class Print {
 			tableTemp.innerHTML = tableHtml;
 			let tableHtmlObject = tableTemp.firstChild;
 			PrintComponentElement.appendChild(tableHtmlObject);
-		};
+		});
 
 		// print
 		window.print();
