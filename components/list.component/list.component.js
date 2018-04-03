@@ -15,7 +15,7 @@ export default class List {
                 <div class="w3-panel w3-teal w3-round ListItems" style="padding:0;height:320px;">
                     <div class="w3-display-container w3-center" style="padding:20px;">
                         <div class="w3-display-container w3-round" style="width:100%;;height:208px;position:relative;">
-                            <img class="Photo w3-border w3-border-white w3-round" style="width:100%;height:208px;">
+                            <img class="Photo w3-border w3-border-white w3-round" style="display: block;width:100%;height:208px;">
                             <i class="material-icons w3-display-middle" style="font-size:40px;">&#xE439;</i>
                             <input class="AddImg w3-btn w3-black" type="file" name="image" id="image" accept="image/*"  style="position:absolute;top:0;left:0;width:248px;height:208px;opacity:0;" >
                         </div>
