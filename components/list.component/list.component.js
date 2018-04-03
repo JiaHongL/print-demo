@@ -39,8 +39,8 @@ export default class List {
         return htmlObject;
     }
 
-    _removeItem() {
-        event.target.parentNode.parentNode.parentNode.remove();
+    _removeItem(e) {
+        e.target.parentNode.parentNode.parentNode.remove();
     }
 
     _create() {

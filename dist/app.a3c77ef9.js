@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({17:[function(require,module,exports) {
+})({12:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -138,13 +138,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":17}],4:[function(require,module,exports) {
+},{"./bundle-url":12}],4:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],15:[function(require,module,exports) {
+},{"_css_loader":5}],11:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -220,7 +220,7 @@ var Print = function () {
 }();
 
 exports.default = Print;
-},{"./print.component.scss":15}],14:[function(require,module,exports) {
+},{"./print.component.scss":11}],10:[function(require,module,exports) {
 module.exports="/02.50082379.jpg";
 },{}],7:[function(require,module,exports) {
 'use strict';
@@ -287,15 +287,15 @@ var Setting = function () {
 }();
 
 exports.default = Setting;
-},{"../../assets/02.jpg":14}],9:[function(require,module,exports) {
+},{"../../assets/02.jpg":10}],13:[function(require,module,exports) {
 module.exports="/03.6e0fdd4b.jpg";
-},{}],10:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 module.exports="/04.611ba2a1.jpg";
-},{}],11:[function(require,module,exports) {
+},{}],15:[function(require,module,exports) {
 module.exports="/05.5f5d6fbb.jpg";
-},{}],12:[function(require,module,exports) {
+},{}],16:[function(require,module,exports) {
 module.exports="/06.b02c8fe3.jpg";
-},{}],13:[function(require,module,exports) {
+},{}],17:[function(require,module,exports) {
 module.exports="/07.b04a0feb.jpg";
 },{}],8:[function(require,module,exports) {
 'use strict';
@@ -357,8 +357,8 @@ var List = function () {
         }
     }, {
         key: '_removeItem',
-        value: function _removeItem() {
-            event.target.parentNode.parentNode.parentNode.remove();
+        value: function _removeItem(e) {
+            e.target.parentNode.parentNode.parentNode.remove();
         }
     }, {
         key: '_create',
@@ -416,7 +416,7 @@ var List = function () {
 }();
 
 exports.default = List;
-},{"../../assets/03.jpg":9,"../../assets/04.jpg":10,"../../assets/05.jpg":11,"../../assets/06.jpg":12,"../../assets/07.jpg":13}],3:[function(require,module,exports) {
+},{"../../assets/03.jpg":13,"../../assets/04.jpg":14,"../../assets/05.jpg":15,"../../assets/06.jpg":16,"../../assets/07.jpg":17}],3:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -487,7 +487,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var control = new _main2.default();
 window.control = control;
-},{"./style/main.scss":4,"./main.js":3}],44:[function(require,module,exports) {
+},{"./style/main.scss":4,"./main.js":3}],28:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -517,7 +517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50323' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49648' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -656,5 +656,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[44,2])
+},{}]},{},[28,2])
 //# sourceMappingURL=/app.a3c77ef9.map
