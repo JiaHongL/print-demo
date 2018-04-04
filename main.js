@@ -16,8 +16,6 @@ export default class MainController {
         this.ListComponent.render('ListComponent');
     }
 
-    addItem() {}
-
     print() {
         let params = {
             setting: this.SettingComponent.getComponentData(),
